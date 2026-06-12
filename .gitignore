@@ -1,0 +1,26 @@
+# secrets, never commit
+.env
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# vector store (chroma; regenerable)
+.chroma/
+chroma/
+*.sqlite3
+
+# cloned repositories (fetched at ingest time)
+repos/
+.cache/
+.gradio/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
