@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>repo-assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header id="topbar">
+      <span class="brand">&gt;<b>.</b> repo-assistant</span>
+      <div class="top-right">
+        <span class="meta">SEMANTIC · RAG · CITATIONS</span>
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="kicker">$ ask any codebase</div>
+      <h1>Chat with any<br /><span class="accent">Repository</span></h1>
+      <p class="sub">Point it at a public GitHub repo. It retrieves the relevant code and answers in plain English — with citations to the exact files.</p>
+    </section>
+
+    <div class="label">$ paste a repo url</div>
+    <div class="input-row">
+      <input id="repo-url" type="text" autocomplete="off" spellcheck="false" placeholder="https://github.com/psf/requests" />
+      <button id="ingest-btn" class="icon-btn" aria-label="Ingest repository" title="Ingest">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z"/></svg>
+      </button>
+    </div>
+    <div id="examples" class="chips"></div>
+
+    <div class="terminal">
+      <div class="terminal-head">● SYS.INDEX_STATUS</div>
+      <div class="terminal-body" id="terminal-body"></div>
+    </div>
+
+    <div class="label">$ ask a question</div>
+    <div class="input-row">
+      <input id="question" type="text" autocomplete="off" placeholder="How does this repo work?" />
+      <button id="ask-btn" class="icon-btn" aria-label="Send question" title="Send">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+    <div id="chat"></div>
+
+    <footer id="site-footer">
+      <span>created by <a class="scramble" href="https://x.com/_sahil_r" target="_blank" rel="noopener">@sahil</a></span>
+      <span class="dot">·</span>
+      <a class="scramble" href="https://github.com/sahilrw/repo-assistant" target="_blank" rel="noopener">github</a>
+      <span class="dot">·</span>
+      <a class="scramble" href="https://linkedin.com/in/sahilrw" target="_blank" rel="noopener">linkedin</a>
+      <span class="dot">·</span>
+      <a class="scramble" href="https://sahilrw.netlify.app/" target="_blank" rel="noopener">portfolio</a>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
