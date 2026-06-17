@@ -1,7 +1,7 @@
 const EXAMPLE_REPOS = [
+  "sahilrw/repo-assistant",
   "sahilrw/research-agent",
   "mlabonne/llm-course",
-  "psf/requests",
   "pallets/click",
   "pallets/flask",
   "fastapi/typer",
